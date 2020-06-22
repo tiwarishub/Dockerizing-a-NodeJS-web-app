@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "diaggarwaks-fc59"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "diaggarwaks-fc59"
+    spec:
+      containers:
+        - name: "diaggarwaks-fc59"
+          image: "acr2ac5ef2vrjdac.azurecr.io/diaggarwaks"
+          ports:
+          - containerPort: 8080
