@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "diaggarwaks-281f"
+    labels:
+        app: "diaggarwaks-281f"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
+    selector:
+        app: "diaggarwaks-281f"
